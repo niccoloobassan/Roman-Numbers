@@ -5,7 +5,7 @@
 
 Convertitore di numeri arabi (1-1000) in numeri romani con stampa ASCII art su 6 righe.
 
-Progetto per il corso di **Metodi e Tecnologie per lo Sviluppo Software** — Università degli Studi di Padova.
+Progetto per il corso di **Metodi e Tecnologie per lo Sviluppo Software** — Università degli Studi di Padova - Laurea Informatica - Triennale.
 
 ## Funzionalità
 
