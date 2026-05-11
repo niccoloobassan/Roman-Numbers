@@ -5,16 +5,55 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class IntegerToRomanTest {
 
     @Test
-    public void classExists() {
+    public void convert_shouldReturn_I_for1() {
         // Arrange
-        IntegerToRoman converter = new IntegerToRoman();
+        int input = 1;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("I", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_II_for2() {
+        // Arrange
+        int input = 2;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("II", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_III_for3() {
+        // Arrange
+        int input = 3;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("III", result);
+    }
+
+    @Test
+    public void convert_shouldThrow_forZero() {
+        // Arrange
+        int input = 0;
 
         // Act & Assert
-        assertEquals(true, converter != null);
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(input);
+        });
     }
 }
