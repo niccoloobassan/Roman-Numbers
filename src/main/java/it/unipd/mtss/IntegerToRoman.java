@@ -9,20 +9,20 @@ package it.unipd.mtss;
  */
 public class IntegerToRoman {
 
-    private static final int[] VALUES = {1};
-    private static final String[] SYMBOLS = {"I"};
+    private static final int[] VALUES = {5, 4, 1};
+    private static final String[] SYMBOLS = {"V", "IV", "I"};
 
     /**
      * Converte un numero intero nel corrispondente numero romano.
      *
-     * @param number il numero da convertire (1-3)
+     * @param number il numero da convertire (1-6)
      * @return la rappresentazione in numeri romani
      * @throws IllegalArgumentException se il numero non e' valido
      */
     public static String convert(int number) {
-        if (number < 1 || number > 3) {
+        if (number < 1 || number > 6) {
             throw new IllegalArgumentException(
-                "Il numero deve essere compreso tra 1 e 3, "
+                "Il numero deve essere compreso tra 1 e 6, "
                 + "ricevuto: " + number);
         }
         StringBuilder roman = new StringBuilder();
