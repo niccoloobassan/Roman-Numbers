@@ -15,14 +15,14 @@ public class IntegerToRoman {
     /**
      * Converte un numero intero nel corrispondente numero romano.
      *
-     * @param number il numero da convertire (1-10)
+     * @param number il numero da convertire (1-20)
      * @return la rappresentazione in numeri romani
      * @throws IllegalArgumentException se il numero non e' valido
      */
     public static String convert(int number) {
-        if (number < 1 || number > 10) {
+        if (number < 1 || number > 20) {
             throw new IllegalArgumentException(
-                "Il numero deve essere compreso tra 1 e 10, "
+                "Il numero deve essere compreso tra 1 e 20, "
                 + "ricevuto: " + number);
         }
         StringBuilder roman = new StringBuilder();

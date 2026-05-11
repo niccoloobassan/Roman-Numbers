@@ -131,6 +131,78 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void convert_shouldReturn_XI_for11() {
+        // Arrange
+        int input = 11;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XI", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XIV_for14() {
+        // Arrange
+        int input = 14;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XIV", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XV_for15() {
+        // Arrange
+        int input = 15;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XV", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XVIII_for18() {
+        // Arrange
+        int input = 18;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XVIII", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XIX_for19() {
+        // Arrange
+        int input = 19;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XIX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XX_for20() {
+        // Arrange
+        int input = 20;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XX", result);
+    }
+
+    @Test
     public void convert_shouldThrow_forZero() {
         // Arrange
         int input = 0;
