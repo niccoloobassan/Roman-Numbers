@@ -23,30 +23,6 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convert_shouldReturn_II_for2() {
-        // Arrange
-        int input = 2;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("II", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_III_for3() {
-        // Arrange
-        int input = 3;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("III", result);
-    }
-
-    @Test
     public void convert_shouldReturn_IV_for4() {
         // Arrange
         int input = 4;
@@ -68,42 +44,6 @@ public class IntegerToRomanTest {
 
         // Assert
         assertEquals("V", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_VI_for6() {
-        // Arrange
-        int input = 6;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("VI", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_VII_for7() {
-        // Arrange
-        int input = 7;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("VII", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_VIII_for8() {
-        // Arrange
-        int input = 8;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("VIII", result);
     }
 
     @Test
@@ -143,54 +83,6 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convert_shouldReturn_XXV_for25() {
-        // Arrange
-        int input = 25;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XXV", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_XXIX_for29() {
-        // Arrange
-        int input = 29;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XXIX", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_XXX_for30() {
-        // Arrange
-        int input = 30;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XXX", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_XXXIX_for39() {
-        // Arrange
-        int input = 39;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XXXIX", result);
-    }
-
-    @Test
     public void convert_shouldReturn_XL_for40() {
         // Arrange
         int input = 40;
@@ -203,30 +95,6 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convert_shouldReturn_XLIV_for44() {
-        // Arrange
-        int input = 44;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XLIV", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_XLIX_for49() {
-        // Arrange
-        int input = 49;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XLIX", result);
-    }
-
-    @Test
     public void convert_shouldReturn_L_for50() {
         // Arrange
         int input = 50;
@@ -236,6 +104,78 @@ public class IntegerToRomanTest {
 
         // Assert
         assertEquals("L", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_LX_for60() {
+        // Arrange
+        int input = 60;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("LX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_LXX_for70() {
+        // Arrange
+        int input = 70;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("LXX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_LXXX_for80() {
+        // Arrange
+        int input = 80;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("LXXX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XC_for90() {
+        // Arrange
+        int input = 90;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_XCIX_for99() {
+        // Arrange
+        int input = 99;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("XCIX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_C_for100() {
+        // Arrange
+        int input = 100;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("C", result);
     }
 
     @Test

@@ -9,22 +9,24 @@ package it.unipd.mtss;
  */
 public class IntegerToRoman {
 
-    private static final int[] VALUES = {50, 40, 10, 9, 5, 4, 1};
+    private static final int[] VALUES = {
+        100, 90, 50, 40, 10, 9, 5, 4, 1
+    };
     private static final String[] SYMBOLS = {
-        "L", "XL", "X", "IX", "V", "IV", "I"
+        "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
     };
 
     /**
      * Converte un numero intero nel corrispondente numero romano.
      *
-     * @param number il numero da convertire (1-50)
+     * @param number il numero da convertire (1-100)
      * @return la rappresentazione in numeri romani
      * @throws IllegalArgumentException se il numero non e' valido
      */
     public static String convert(int number) {
-        if (number < 1 || number > 50) {
+        if (number < 1 || number > 100) {
             throw new IllegalArgumentException(
-                "Il numero deve essere compreso tra 1 e 50, "
+                "Il numero deve essere compreso tra 1 e 100, "
                 + "ricevuto: " + number);
         }
         StringBuilder roman = new StringBuilder();
