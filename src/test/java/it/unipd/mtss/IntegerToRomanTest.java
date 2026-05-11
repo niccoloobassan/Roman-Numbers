@@ -83,6 +83,54 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void convert_shouldReturn_VII_for7() {
+        // Arrange
+        int input = 7;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("VII", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_VIII_for8() {
+        // Arrange
+        int input = 8;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("VIII", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_IX_for9() {
+        // Arrange
+        int input = 9;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("IX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_X_for10() {
+        // Arrange
+        int input = 10;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("X", result);
+    }
+
+    @Test
     public void convert_shouldThrow_forZero() {
         // Arrange
         int input = 0;
