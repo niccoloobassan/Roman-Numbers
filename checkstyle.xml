@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+
+    <!-- FileLength: limita la lunghezza dei file -->
+    <module name="FileLength"/>
+
+    <!-- FileTabCharacter: non permette tab nei file -->
+    <module name="FileTabCharacter"/>
+
+    <!-- LineLength: lunghezza massima riga 100 caratteri -->
+    <module name="LineLength">
+        <property name="max" value="100"/>
+    </module>
+
+    <!-- Header: intestazione richiesta in tutti i file Java -->
+    <module name="Header">
+        <property name="headerFile" value="config/java.header"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
+
+    <module name="TreeWalker">
+        <!-- BooleanExpressionComplexity -->
+        <module name="BooleanExpressionComplexity"/>
+
+        <!-- CyclomaticComplexity -->
+        <module name="CyclomaticComplexity"/>
+
+        <!-- MethodLength -->
+        <module name="MethodLength"/>
+
+        <!-- EmptyCatchBlock -->
+        <module name="EmptyCatchBlock"/>
+
+        <!-- AvoidStarImport -->
+        <module name="AvoidStarImport"/>
+
+        <!-- IllegalImport -->
+        <module name="IllegalImport"/>
+
+        <!-- NeedBraces -->
+        <module name="NeedBraces"/>
+    </module>
+</module>
