@@ -6,27 +6,34 @@ package it.unipd.mtss;
 
 /**
  * Classe per la conversione di numeri interi in numeri romani.
+ * Supporta la conversione di numeri da 1 a 1000.
  */
 public class IntegerToRoman {
 
     private static final int[] VALUES = {
-        100, 90, 50, 40, 10, 9, 5, 4, 1
+        1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1
     };
     private static final String[] SYMBOLS = {
-        "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
+        "M", "CM", "D", "CD", "C", "XC", "L", "XL",
+        "X", "IX", "V", "IV", "I"
     };
 
     /**
      * Converte un numero intero nel corrispondente numero romano.
      *
-     * @param number il numero da convertire (1-100)
+     * @param number il numero da convertire (1-1000)
      * @return la rappresentazione in numeri romani
      * @throws IllegalArgumentException se il numero non e' valido
      */
     public static String convert(int number) {
-        if (number < 1 || number > 100) {
+        if (number < 1) {
             throw new IllegalArgumentException(
-                "Il numero deve essere compreso tra 1 e 100, "
+                "Il numero deve essere maggiore di 0, "
+                + "ricevuto: " + number);
+        }
+        if (number > 1000) {
+            throw new IllegalArgumentException(
+                "Il numero deve essere minore o uguale a 1000, "
                 + "ricevuto: " + number);
         }
         StringBuilder roman = new StringBuilder();

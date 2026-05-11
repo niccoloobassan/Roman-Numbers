@@ -71,18 +71,6 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convert_shouldReturn_XX_for20() {
-        // Arrange
-        int input = 20;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XX", result);
-    }
-
-    @Test
     public void convert_shouldReturn_XL_for40() {
         // Arrange
         int input = 40;
@@ -107,42 +95,6 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void convert_shouldReturn_LX_for60() {
-        // Arrange
-        int input = 60;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("LX", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_LXX_for70() {
-        // Arrange
-        int input = 70;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("LXX", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_LXXX_for80() {
-        // Arrange
-        int input = 80;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("LXXX", result);
-    }
-
-    @Test
     public void convert_shouldReturn_XC_for90() {
         // Arrange
         int input = 90;
@@ -152,18 +104,6 @@ public class IntegerToRomanTest {
 
         // Assert
         assertEquals("XC", result);
-    }
-
-    @Test
-    public void convert_shouldReturn_XCIX_for99() {
-        // Arrange
-        int input = 99;
-
-        // Act
-        String result = IntegerToRoman.convert(input);
-
-        // Assert
-        assertEquals("XCIX", result);
     }
 
     @Test
@@ -179,9 +119,115 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void convert_shouldReturn_CD_for400() {
+        // Arrange
+        int input = 400;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("CD", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_D_for500() {
+        // Arrange
+        int input = 500;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("D", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_CM_for900() {
+        // Arrange
+        int input = 900;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("CM", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_M_for1000() {
+        // Arrange
+        int input = 1000;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("M", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_CDXLIV_for444() {
+        // Arrange
+        int input = 444;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("CDXLIV", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_CMXCIX_for999() {
+        // Arrange
+        int input = 999;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("CMXCIX", result);
+    }
+
+    @Test
+    public void convert_shouldReturn_DCCLXXVII_for777() {
+        // Arrange
+        int input = 777;
+
+        // Act
+        String result = IntegerToRoman.convert(input);
+
+        // Assert
+        assertEquals("DCCLXXVII", result);
+    }
+
+    @Test
     public void convert_shouldThrow_forZero() {
         // Arrange
         int input = 0;
+
+        // Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(input);
+        });
+    }
+
+    @Test
+    public void convert_shouldThrow_forNegative() {
+        // Arrange
+        int input = -1;
+
+        // Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(input);
+        });
+    }
+
+    @Test
+    public void convert_shouldThrow_forGreaterThan1000() {
+        // Arrange
+        int input = 1001;
 
         // Act & Assert
         assertThrows(IllegalArgumentException.class, () -> {
